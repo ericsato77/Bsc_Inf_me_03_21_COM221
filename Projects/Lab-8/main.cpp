@@ -1,38 +1,31 @@
-// Main function for the program
-#include<iostream>
-#include "Box.h"
-using namespace std;
+#include <iostream>
+#include "person.h"
 
 int main() {
-   Box Box1;                // Declare Box1 of type Box
-   Box Box2;                // Declare Box2 of type Box
-   Box Box3;                // Declare Box3 of type Box
-   double volume = 0.0;     // Store the volume of a box here
- 
-   // box 1 specification
-   Box1.setLength(6.0); 
-   Box1.setBreadth(7.0); 
-   Box1.setHeight(5.0);
- 
-   // box 2 specification
-   Box2.setLength(12.0); 
-   Box2.setBreadth(13.0); 
-   Box2.setHeight(10.0);
- 
-   // volume of box 1
-   volume = Box1.GetVolume();
-   cout << "Volume of Box1 : " << volume <<endl;
- 
-   // volume of box 2
-   volume = Box2.GetVolume();
-   cout << "Volume of Box2 : " << volume <<endl;
+    // Creating two Person objects
+    Person Jane(25);
+    Person John(30);
 
-   // Add two object as follows:
-   Box3 = Box1 + Box2;
+    // Comparing if Jane is the same person as John
+    if(Jane == John) {
+        std::cout << "This is the same person" << std::endl;
+    } else {
+        std::cout << "This is NOT the same person" << std::endl;
+    }
 
-   // volume of box 3
-   volume = Box3.GetVolume();
-   cout << "Volume of Box3 : " << volume <<endl;
+    // Comparing if Jane is younger than John
+    if (Jane < John) {
+        std::cout << "Jane is younger than John" << std::endl;
+    } else {
+        std::cout << "Jane is NOT younger than John" << std::endl;
+    }
 
-   return 0;
+    // Comparing if Jane is older than John
+    if (Jane > John) {
+        std::cout << "Jane is older than John" << std::endl;
+    } else {
+        std::cout << "Jane is NOT older than John" << std::endl;
+    }
+
+    return 0;
 }
